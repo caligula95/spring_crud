@@ -1,0 +1,8 @@
+version: '3'
+services:
+  postgres:
+    image: postgres:9.4
+    volumes:
+      - ./initial_sql_script.sql:/docker-entrypoint-initdb.d/initial_sql_script.sql
+    ports:
+      - 5432:5432
